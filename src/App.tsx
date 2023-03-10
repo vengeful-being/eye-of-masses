@@ -3,11 +3,18 @@ import reactLogo from "./assets/react.svg";
 import "./App.css";
 import Map from "./components/Map";
 function App() {
-
+  
+const markerData = [  {    schoolName: 'Example School',    cityName: 'New York City',    provinceName: 'New York',    position: [36.6, 51.6167],
+    symptoms: ['Unknown'],
+    photos: [      'https://example.com/photo1.jpg',      'https://example.com/photo2.jpg',    ],
+    relatedLinks: ['https://example.com/link1', 'https://example.com/link2'],
+    reportedAttackDate: '2023-03-07',
+  },
+];
   return (
     <div className="container" style={{borderColor: 'black', borderRadius: '2px'}}>
-      <div className="map">
-        <Map />
+      <div>
+        <Map markers={markerData} />
       </div>
     </div>
   );
